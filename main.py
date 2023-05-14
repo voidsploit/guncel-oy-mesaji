@@ -13,7 +13,7 @@ def virgul_ekle(sayi):
             virgullu_sayi += "."
     
     return virgullu_sayi
-webhook_url = 'WEBHOOK-LINKI'
+webhook_url = 'DISCORD-WEBHOOK-TOKEN'
 headers = {
     'Sec-Ch-Ua': '"Not:A-Brand";v="99", "Chromium";v="112"',
     'Accept': 'application/json',
@@ -114,8 +114,18 @@ def mesajgonder():
     })
 
     embed['fields'].append({
-        'name': 'Bu mesaj 30 saniye sonra tekrar gonderilecektir',
+        'name': 'Kaynak:',
+        'value': 'https://www.indyturk.com/Anka-haber',
+        'inline': True
+    })
+    embed['fields'].append({
+        'name': 'Bu mesaj 1 dakika sonra tekrar gonderilecektir',
         'value': '',
+        'inline': True
+    })
+    embed['fields'].append({
+        'name': 'Coded by:',
+        'value': 'https://github.com/voidsploit',
         'inline': True
     })
 
@@ -132,4 +142,4 @@ def mesajgonder():
 
 while True:
     mesajgonder()
-    time.sleep(30)
+    time.sleep(60)
